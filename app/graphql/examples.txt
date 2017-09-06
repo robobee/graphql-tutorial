@@ -1,0 +1,40 @@
+mutation {
+  createLink(
+    url:"http://www.buildyourownlisp.com/",
+    description:"Learn C and build your own Lisp"
+  ) {
+    id
+    url
+    description
+  }
+}
+
+mutation {
+  createLink(
+    "url": "http://graphql.org/",
+    "description": "The Best Query Language"
+  ) {
+    id
+    url
+    description
+  }
+}
+
+mutation {
+  createLink(
+    "url": "http://dev.apollodata.com/",
+    "description": "Awesome GraphQL Client"
+  ) {
+    id
+    url
+    description
+  }
+}
+
+query {
+  allLinks {
+    id
+    url
+    description
+  }
+}
