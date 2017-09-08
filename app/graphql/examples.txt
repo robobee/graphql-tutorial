@@ -68,3 +68,18 @@ mutation {
     }
   }
 }
+
+mutation {
+  createLink(
+    url: "http://localhost:3000/graphiql",
+    description:"Your testing playground",
+  ) {
+    id
+    url
+    description
+    postedBy {
+      id
+      name
+    }
+  }
+}
