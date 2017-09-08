@@ -38,3 +38,33 @@ query {
     description
   }
 }
+
+mutation {
+  createUser(
+    name: "Radoslav Stankov",
+    authProvider: {
+      email: {
+        email:"rado@example.com",
+        password: "123456"
+      }
+    }
+  ) {
+    id
+    email
+    name
+  }
+}
+
+mutation {
+  signinUser(
+    email: {
+      email:"rado@example.com",
+      password:"123456"
+    }
+  ) {
+    token
+    user {
+      id
+    }
+  }
+}
