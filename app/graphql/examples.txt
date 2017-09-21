@@ -94,3 +94,26 @@ mutation {
     }
   }
 }
+
+query {
+  allLinks {
+    votes {
+      id
+    }
+  }
+}
+
+query {
+  allLinks {
+    id
+    postedBy {
+      name
+      votes {
+        link {
+          id
+          description
+        }
+      }
+    }
+  }
+}
