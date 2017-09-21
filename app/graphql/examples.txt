@@ -117,3 +117,9 @@ query {
     }
   }
 }
+
+mutation {
+  createLink(url:"", description:"") {
+    id
+  }
+}
