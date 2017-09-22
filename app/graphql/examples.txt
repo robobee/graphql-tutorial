@@ -144,3 +144,9 @@ query {
     description
   }
 }
+
+{
+  allLinks(first:2, skip:1){
+    id
+  }
+}
