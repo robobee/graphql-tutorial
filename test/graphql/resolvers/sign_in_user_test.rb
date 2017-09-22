@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Resolvers::SignInUserTest < ActiveSupport::TestCase
   def perform(args = {})
-    Resolvers::SignInUser.new.call(nil, args, { cookies: {}})
+    Resolvers::SignInUser.new.call(nil, args, { session: {}})
   end
 
   setup do
