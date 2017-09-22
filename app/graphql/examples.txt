@@ -123,3 +123,24 @@ mutation {
     id
   }
 }
+
+query {
+  allLinks(filter:{description_contains:"lisp"}) {
+    id
+    description
+  }
+}
+
+query {
+  allLinks(
+    filter:{
+      description_contains:"lisp",
+    	OR:{
+        description_contains:"Awesome"
+      }
+    }
+  ) {
+    id
+    description
+  }
+}
